@@ -4,15 +4,15 @@ Welcome to the world of system design, where engineers build castles in the air 
 
 ### Vertical and Horizontal Scaling
 
-Let's say you have a single [server](#server) up and running. It's accepting requests over an HTTP network in the [Request-Response Lifecycle](#rrl). After some time you're getting more user's who are making tons of API calls which your server cannot handle.
+You and I are working in a startup where we're building the next big thing. We recently launched our app and it's getting a handful of user's. To serve these users we have a single [server](#server) up and running. It's accepting requests over an HTTP network in the [Request-Response Lifecycle](#rrl). After some days, our efforts paid off, and our app started booming! But now that we're getting more users, they're making tonnes of API calls, which our server is not being able to handle.
 
-To tackle this issue we've decided to increase the power of our sever by having a powerful CPU, more RAM. This is known as **Vertical Scaling**
+To tackle this issue we've decided to increase the power of our sever by having a powerful CPU, more RAM. So it'll be able to handle more users. This is known as **Vertical Scaling**
 
 It is pretty easy but very limited, there is a limit on how much resources we can provide to our server.
 
 The better approach would be to create replicas of our server, so each server can handle subset of requests.
 
-This is known as **Horizontal Scaling**. This is more powerful because we can scale this infinitely. This also adds `Redundancy` & `Fault Tolerance` in our system, because if one of our server goes down the request can easily be routed to another server. This eliminates our previous [`single point of failure`](#spf). The downside is that this approach is much more complicated.
+This is known as **Horizontal Scaling**. This is more powerful because we can scale this infinitely. This also adds `Redundancy` & `Fault Tolerance` in our system, because if one of our server goes down the request can easily be routed to another server. This eliminates our previous [`single point of failure`](#spf). The downside is that this approach is much more complicated and we'll need to a lot of work.
 
 ### Load Balancer
 
